@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XSP Weekly Call Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+</head>
+<body>
+  <header>
+    <h1>XSP Weekly Call Dashboard</h1>
+    <div class="price-header">
+      <span id="currentPrice">—</span>
+      <span id="priceChange">—</span>
+      <span class="dte-badge">7–14 DTE</span>
+    </div>
+    <p class="disclaimer">Personal tool · Delayed data · Not financial advice</p>
+  </header>
+
+  <div class="grid">
+    <div class="card chart-card">
+      <h2>Hourly Chart + Levels</h2>
+      <canvas id="priceChart"></canvas>
+      <p id="chartStatus" class="status">Loading...</p>
+    </div>
+
+    <div class="card verdict-card">
+      <h2>Setup Verdict</h2>
+      <div id="setupScore" class="score">—</div>
+      <div id="verdict" class="verdict">—</div>
+      <p id="verdictReason">Analyzing...</p>
+      <p id="scoreExplanation" class="insight"></p>
+    </div>
+
+    <div class="card">
+      <h2>Key Levels</h2>
+      <div id="levels"></div>
+      <p id="levelsExplanation" class="insight"></p>
+    </div>
+
+    <div class="card">
+      <h2>Expected Move & Targets</h2>
+      <div id="targets"></div>
+      <p id="emExplanation" class="insight"></p>
+    </div>
+
+    <div class="card">
+      <h2>VIX & Volatility</h2>
+      <div id="volPanel"></div>
+      <p id="vixExplanation" class="insight"></p>
+    </div>
+
+    <div class="card">
+      <h2>Momentum</h2>
+      <div id="momentumPanel"></div>
+      <p id="momentumExplanation" class="insight"></p>
+    </div>
+
+    <div class="card">
+      <h2>Volume Path (7–14 DTE Calls)</h2>
+      <div id="volumePath"></div>
+      <p id="volumeExplanation" class="insight"></p>
+    </div>
+
+    <div class="card">
+      <h2>Risk / Reward</h2>
+      <div id="rrPanel"></div>
+      <p id="rrExplanation" class="insight"></p>
+    </div>
+
+    <div class="card">
+      <h2>Confluence Checklist</h2>
+      <div id="checklist"></div>
+      <p id="checklistExplanation" class="insight"></p>
+    </div>
+
+    <div class="card">
+      <h2>Preferred Setup</h2>
+      <p id="setup">Waiting for data...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

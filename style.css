@@ -1,0 +1,63 @@
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0d1117;
+  color: #e6edf3;
+  margin: 0;
+  padding: 16px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+header { margin-bottom: 20px; }
+.price-header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+.dte-badge {
+  background: #238636;
+  color: white;
+  font-size: 0.5em;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+.disclaimer { color: #8b949e; font-size: 0.85em; margin-top: 4px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 16px;
+}
+.chart-card { grid-column: span 2; }
+.verdict-card { text-align: center; }
+.score { font-size: 2.6em; font-weight: 700; margin: 4px 0; }
+.verdict { font-size: 2em; font-weight: 700; margin: 6px 0; }
+.go { color: #3fb950; }
+.nogo { color: #f85149; }
+.neutral { color: #d29922; }
+.status { color: #8b949e; font-size: 0.9em; }
+.level-row, .target-row, .rr-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid #21262d;
+}
+.level-row:last-child, .target-row:last-child, .rr-row:last-child { border-bottom: none; }
+.checklist-item { padding: 4px 0; }
+.checklist-item.pass { color: #3fb950; }
+.checklist-item.fail { color: #8b949e; }
+.insight {
+  color: #8b949e;
+  font-size: 0.88em;
+  margin-top: 12px;
+  line-height: 1.4;
+}
+canvas { max-width: 100%; }
